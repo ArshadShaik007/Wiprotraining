@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-28T17:38:56.291109" rpa="false" schemaversion="5">
+<suite id="s1" name="Put" source="C:\Users\Administrator\PycharmProjects\RoboFramework\API\Put.robot">
+<test id="s1-t1" name="Post register user" line="12">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-05-28T17:38:57.103583" level="INFO">Creating Session using : alias=registersession, url=https://demoqa.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>registersession</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-05-28T17:38:57.103583" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-28T17:38:57.103583" level="INFO">${requestbody} = {'userName': 'Shiva Pratap', 'password': 'ShivaPratap@1'}</msg>
+<var>${requestbody}</var>
+<arg>userName=${user}</arg>
+<arg>password=${pass}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-28T17:38:57.103583" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-28T17:38:57.119208" level="INFO">${header} = {'Content-Type': 'application/json;charset=utf-8', 'Accept': '/'}</msg>
+<var>${header}</var>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+<arg>Accept=/</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-28T17:38:57.119208" elapsed="0.000000"/>
+</kw>
+<kw name="Put Request" owner="RequestsLibrary">
+<msg time="2024-05-28T17:38:57.119208" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
+<msg time="2024-05-28T17:38:57.119208" level="FAIL">Keyword 'RequestsLibrary.Put Request' missing value for argument 'uri'.</msg>
+<var>${response}</var>
+<arg>registersession /Account/v1/User</arg>
+<arg>data= ${requestbody}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `PUT On Session` instead.</doc>
+<status status="FAIL" start="2024-05-28T17:38:57.119208" elapsed="0.000000">Keyword 'RequestsLibrary.Put Request' missing value for argument 'uri'.</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-05-28T17:38:57.119208" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-05-28T17:38:57.119208" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-05-28T17:38:57.119208" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-28T17:38:57.103583" elapsed="0.015625">Keyword 'RequestsLibrary.Put Request' missing value for argument 'uri'.</status>
+</test>
+<status status="FAIL" start="2024-05-28T17:38:56.291109" elapsed="0.828099"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Put">Put</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-28T17:38:57.119208" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
+</errors>
+</robot>

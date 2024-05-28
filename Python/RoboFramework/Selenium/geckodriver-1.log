@@ -1,0 +1,21 @@
+1716792147446	geckodriver	INFO	Listening on 127.0.0.1:53864
+1716792147994	mozrunner::runner	INFO	Running command: "C:\\Users\\Administrator\\.cache\\selenium\\firefox\\win64\\126.0\\firefox.exe" "--marionette" "--remote-de ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofileR6fpTY"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1716792149352	Marionette	INFO	Marionette enabled
+1716792149501	Marionette	INFO	Listening on port 53876
+WebDriver BiDi listening on ws://127.0.0.1:53865
+Read port: 53876
+1716792149773	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53865/devtools/browser/990f5c48-bd74-4fab-9fa7-85891d7763d0
+1716792179380	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+Exiting due to channel error.
+[GFX1-]: CompositorBridgeChild re[GFX1-]: CompositorBridgeChild receives IPC cl[GFX1-]: CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
+ceives IPC close with reason=AbnormalShutdown
+ose with reason=AbnormalShutdown
+[GFX1-]: CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
